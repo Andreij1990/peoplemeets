@@ -1,0 +1,185 @@
+.conversation-list-container {
+  padding: 1rem;
+}
+
+.conversation-item,
+.suggested-user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.conversation-item.blocked .conversation-link {
+  color: #888 !important;
+  cursor: not-allowed;
+}
+
+
+.conversation-link,
+.user-profile-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex: 1;
+}
+
+.profile-img, .profile-img-chat {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.unread-indicator {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.interest-label {
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.other-label {
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.interest-value {
+  color: #666;
+}
+
+.interest-value.match {
+  color: green;
+  font-weight: bold;
+}
+
+.chat-link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.age-input {
+  margin-left: 10px;
+}
+
+.refresh-button {
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.new-user-label {
+  background-color: #2196f3;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+.conversation-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.message-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.last-message {
+  font-style: italic;
+}
+
+.unread-indicator {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+.unblock-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-profile-link,
+.conversation-link {
+  max-width: 800px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.age-label {
+  margin-left: 5px;
+}
+
+.age-label .gender-label {
+  margin-right: 2px;
+}
+
+@media (max-width: 1000px) {
+  .field-value, .other-label {
+    display: none;
+  }
+
+  .profile-link span,
+.conversation-link {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.age-label, .gender-label {
+  display: none;
+}
+
+.chat-link span {
+  display: none;
+}
+}
+
+@media (max-width: 500px) {
+.profile-img, .interest-marker {
+display: none;
+}
+  .conversation-text {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+body {
+  background-color: #fff8f4;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px grey;
+  padding: 2rem;
+}
+
+button {
+  background-color: #ff9472;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin: 3px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f27059;
+  cursor: pointer;
+}

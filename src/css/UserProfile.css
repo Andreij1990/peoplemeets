@@ -1,0 +1,290 @@
+.profile-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-main {
+  display: flex;
+  gap: 40px;
+}
+
+.profile-left,
+.profile-right {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.profile-text-container {
+  width: 100%;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.profile-name {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.profile-values {
+  width: 100%;
+}
+
+.profile-values p {
+  margin: 6px 0;
+}
+
+.profile-text-container {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.profile-text {
+  font-style: italic;
+  font-size: 16px;
+  white-space: pre-line;
+  align-items: center;
+  word-break: break-word;
+ margin: 10px;
+}
+
+.edit-button,
+.message-button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.message-button {
+  background-color: #28a745;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.message-button:hover {
+  background-color: #1e7e34;
+}
+
+.profile-edit-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.profile-edit-form input,
+.profile-edit-form select,
+.profile-edit-form textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.profile-edit-form textarea {
+  min-height: 100px;
+}
+
+.profile-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-image-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border: 2px dashed #999;
+  border-radius: 8px;
+  color: #999;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-image-box:hover {
+  background: #f0f0f0;
+}
+
+.profile-image-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-image.editable {
+  border: 2px dashed #aaa;
+  opacity: 0.9;
+}
+
+.profile-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.profile-image-label:hover .profile-image-overlay {
+  opacity: 1;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.remove-gallery-button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-weight: bold;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.profile-edit-form {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.sticky-buttons {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+  border-top: 1px solid #ccc;
+  z-index: 10;
+}
+
+.sticky-buttons button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.gallery-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 5px;
+}
+
+.char-counter {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 868px) {
+  .profile-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-edit-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .gallery-images {
+    justify-content: center;
+    gap: 1px;
+  }
+
+  .sticky-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sticky-buttons button {
+    width: 100%;
+  }
+
+  .modal-image {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}
