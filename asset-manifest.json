@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/peoplemeets/static/css/main.25384b01.css",
+    "main.js": "/peoplemeets/static/js/main.fbf4e7af.js",
+    "static/js/453.4e14d30e.chunk.js": "/peoplemeets/static/js/453.4e14d30e.chunk.js",
+    "static/media/logo.png": "/peoplemeets/static/media/logo.5ac4ece47a16f2f9771e.png",
+    "static/media/default-profile-pic.jpg": "/peoplemeets/static/media/default-profile-pic.a130101de0bcb07dbe2c.jpg",
+    "index.html": "/peoplemeets/index.html",
+    "main.25384b01.css.map": "/peoplemeets/static/css/main.25384b01.css.map",
+    "main.fbf4e7af.js.map": "/peoplemeets/static/js/main.fbf4e7af.js.map",
+    "453.4e14d30e.chunk.js.map": "/peoplemeets/static/js/453.4e14d30e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25384b01.css",
+    "static/js/main.fbf4e7af.js"
+  ]
+}
