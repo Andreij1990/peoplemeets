@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/peoplemeets/static/css/main.0963741d.css",
+    "main.css": "/peoplemeets/static/css/main.78399eff.css",
     "main.js": "/peoplemeets/static/js/main.6f992c90.js",
     "static/js/453.4e14d30e.chunk.js": "/peoplemeets/static/js/453.4e14d30e.chunk.js",
     "static/media/logo.png": "/peoplemeets/static/media/logo.5ac4ece47a16f2f9771e.png",
     "static/media/default-profile-pic.jpg": "/peoplemeets/static/media/default-profile-pic.a130101de0bcb07dbe2c.jpg",
     "index.html": "/peoplemeets/index.html",
-    "main.0963741d.css.map": "/peoplemeets/static/css/main.0963741d.css.map",
+    "main.78399eff.css.map": "/peoplemeets/static/css/main.78399eff.css.map",
     "main.6f992c90.js.map": "/peoplemeets/static/js/main.6f992c90.js.map",
     "453.4e14d30e.chunk.js.map": "/peoplemeets/static/js/453.4e14d30e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0963741d.css",
+    "static/css/main.78399eff.css",
     "static/js/main.6f992c90.js"
   ]
 }
