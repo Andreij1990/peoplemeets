@@ -189,43 +189,52 @@ const commonInterests = user.interests.filter(i =>
 
     const isNewUser = user.createdAt && (Date.now() - user.createdAt.getTime()) < 3 * 24 * 60 * 60 * 1000;
 
-    const formatField = (label, value, match) => (
-      value ? (
-        <span className="other-label">
-          {label} <span className={`field-value${match ? ' field-match' : ''}`}>{value}</span>
-        </span>
-      ) : null
-    );
+const formatField = (label, value, match) => (
+  value ? (
+    <div className="other-label">
+      {label} <span className={`field-value${match ? ' field-match' : ''}`}>{value}</span>
+    </div>
+  ) : null
+);
 
-    return (
-      <li key={user.id} className="suggested-user-item">
-        <Link to={`/users/${user.id}`} className="user-profile-link">
-          <img src={user.photoURL} alt={user.name} className="profile-img" />
-          <span>
-            {user.name}
-            {isNewUser && <span className="new-user-label">Ny</span>}
-          </span></Link>
+return (
+<li key={user.id} className="suggested-user-item">
+<div className="user-left">
+  <Link to={`/users/${user.id}`} className="user-profile-link">
+    <img src={user.photoURL} alt={user.name} className="profile-img" />
+  <div className="user-name">
+    {user.name}
+    {isNewUser && <span className="new-user-label">Ny</span>}
+  </div>
+  </Link>
+</div>
 
-          <span className="interest-label">
-            <span className='interest-marker'>Intressen:</span>{' '}
-            {user.interests.map((interest, index) => (
-              <span
-                key={index}
-                className={`interest-value${commonInterests.includes(interest) ? ' match' : ''}`}
-              >
-                {interest}{index < user.interests.length - 1 ? ', ' : ''}
-              </span>
-            ))}
-          </span>
+<div className="user-interests">
+  <span className="interest-label">
+    <span className="interest-marker"></span>
+    {user.interests.map((interest, index) => (
+      <span
+        key={index}
+        className={`interest-value${commonInterests.includes(interest) ? ' match' : ''}`}
+      >
+        {interest}{' '}
+      </span>
+    ))}
+  </span>
+</div>
 
-          {formatField('Stad:', user.city, user.city === currentUserData.city)}
-          {formatField('Kön:', user.gender, user.gender === currentUserData.gender)}
-          {formatField('Ålder:', user.age, user.age === currentUserData.age)}
-          {formatField('Läggning:', user.sexuality, user.sexuality === currentUserData.sexuality)}
-          {formatField('Relation:', user.relationshipStatus, user.relationshipStatus === currentUserData.relationshipStatus)}
+  <div className="user-details">
+    {formatField('Stad:', user.city, user.city === currentUserData.city)}
+    {formatField('Kön:', user.gender, user.gender === currentUserData.gender)}
+    {formatField('Ålder:', user.age, user.age === currentUserData.age)}
+    {formatField('Läggning:', user.sexuality, user.sexuality === currentUserData.sexuality)}
+    {formatField('Relation:', user.relationshipStatus, user.relationshipStatus === currentUserData.relationshipStatus)}
+  </div>
 
-        <Link to={`/chat/${user.id}`} className="chat-link">💬 <span>Chatta</span></Link>
-      </li>
+  <div className="chat-button-container">
+    <Link to={`/chat/${user.id}`} className="chat-link">💬 <span>Chatta</span></Link>
+  </div>
+</li>
     );
   });
 };
@@ -313,8 +322,8 @@ const handleUnblockUser = async (otherUserId) => {
             className="profile-img"
           />
           <span>
-            {conv.otherUserName}: {conv.lastMessage}
-            {isBlocked && <span> (Blockerad)</span>}
+           {conv.otherUserName}<span className='last-message'> {conv.lastMessage}</span>
+            {isBlocked && <span className='blockerad-status'> (Blockerad)</span>}
           </span>
 {!isBlocked && conv.isUnread && <span className="unread-indicator">Oläst</span>}
         </Link>

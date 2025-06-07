@@ -2,8 +2,7 @@
   padding: 1rem;
 }
 
-.conversation-item,
-.suggested-user-item {
+.conversation-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -14,20 +13,12 @@
   cursor: not-allowed;
 }
 
-
-.conversation-link,
-.user-profile-link {
+.conversation-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   flex: 1;
-}
-
-.profile-img, .profile-img-chat {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
+  font-weight: bold;
 }
 
 .unread-indicator {
@@ -60,7 +51,7 @@
 .chat-link {
   margin-left: 10px;
   text-decoration: none;
-  color: blue;
+  color: #0056b3;
 }
 
 .filters {
@@ -80,16 +71,6 @@
   border: 1px solid #333;
   background-color: #f5f5f5;
   border-radius: 4px;
-}
-
-.new-user-label {
-  background-color: #2196f3;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 12px;
-  margin-left: 8px;
 }
 
 .conversation-content {
@@ -113,6 +94,8 @@
 
 .last-message {
   font-style: italic;
+  font-weight: bold;
+  color: #b66770;
 }
 
 .unread-indicator {
@@ -143,6 +126,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
 }
 
 .age-label {
@@ -153,33 +138,100 @@
   margin-right: 2px;
 }
 
-@media (max-width: 1000px) {
-  .field-value, .other-label {
-    display: none;
+.suggested-user-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.user-left {
+  width: 120px;
+  text-align: center;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.new-user-label {
+  display: inline-block;
+  margin-left: 5px;
+  color: #fff;
+  background: blue;
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+.user-interests {
+  flex: 1;
+  min-width: 200px;
+}
+
+.interest-label {
+  display: block;
+}
+
+.interest-value {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-right: 4px;
+  border: 1px solid #ccc;
+}
+
+.interest-value.match {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+  border-color: #c3e6cb;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.chat-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 120px;
+}
+
+.chat-link {
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chat-link:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .profile-img {
+    width: 40px;
+    height: 40px;
   }
-
-  .profile-link span,
-.conversation-link {
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.age-label, .gender-label {
-  display: none;
-}
-
-.chat-link span {
-  display: none;
-}
-}
-
-@media (max-width: 500px) {
-.profile-img, .interest-marker {
-display: none;
-}
-  .conversation-text {
+  .last-message, .blockerad-status {
     display: none;
-  }
+}
 }
