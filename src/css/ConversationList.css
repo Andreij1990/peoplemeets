@@ -11,6 +11,7 @@
 .conversation-item.blocked .conversation-link {
   color: #888 !important;
   cursor: not-allowed;
+  text-decoration: line-through;
 }
 
 .conversation-link {
